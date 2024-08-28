@@ -1,12 +1,12 @@
 # vscode-memory
 
-Puts current memory usage of VS Code in status bar against total free memory.
+Show VS Code memory usage.
 
-![vscode-memory](https://raw.githubusercontent.com/seripap/vscode-memory/master/images/demo.png)
+![vscode-memory](https://raw.githubusercontent.com/undermoonn/vscode-memory/master/images/demo.png)
 
 ## Extension Settings
 
-* `vscodemem.frequency`: frequency in which to update
+- `vscodemem.frequency`: frequency in which to update
 
 ## Release Notes
 
