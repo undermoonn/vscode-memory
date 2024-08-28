@@ -2,7 +2,7 @@
   "name": "vscode-memory-usage",
   "displayName": "VS Code Memory Usage",
   "description": "Show VS Code Memory Usage",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "publisher": "undermoon",
   "repository": "https://github.com/undermoonn/vscode-memory",
   "icon": "images/icon.png",

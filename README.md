@@ -10,6 +10,10 @@ Show VS Code memory usage.
 
 ## Release Notes
 
+### 1.1.0
+
+- Fix Total GiB
+
 ### 1.0.0
 
 - Fork from https://github.com/seripap/vscode-memory

@@ -50,13 +50,12 @@ class VSMemory {
           return prev + stats[key].memory
         }, 0)
         const usageGiB = usageBytes / (1024 * 1024 * 1024)
-        const totalGiB =
-          (this._totalMemory - os.freemem()) / (1024 * 1024 * 1024)
+        const totalGiB = this._totalMemory / (1024 * 1024 * 1024)
         const difference = totalGiB - usageGiB
 
         statusBarItem.text = `${
           difference < usageGiB - 3 ? `$(alert)` : ''
-        } ${usageGiB.toFixed(2)} / ${totalGiB.toFixed(2)} GiB`
+        } ${usageGiB.toFixed(2)} / ${totalGiB} GiB`
         setTimeout(
           () => this.update(statusBarItem),
           config.get('frequency', 2000)
