@@ -15,7 +15,10 @@ function getProcessSearchTerm() {
   if (process.execPath?.match(/Cursor Helper/)) {
     return 'Cursor'
   }
-  return 'Visual Studio Code'
+  if (process.platform === 'linux' || process.platform === 'darwin') {
+    return 'Visual Studio Code'
+  }
+  return 'Code.exe'
 }
 
 export function activate(context: ExtensionContext) {
@@ -55,7 +58,7 @@ class VSMemory {
 
         statusBarItem.text = `${
           difference < usageGiB - 3 ? `$(alert)` : ''
-        } ${usageGiB.toFixed(2)} / ${totalGiB} GiB`
+        } ${usageGiB.toFixed(2)} / ${Math.fround(totalGiB).toFixed(0)} GiB`
         setTimeout(
           () => this.update(statusBarItem),
           config.get('frequency', 2000)
