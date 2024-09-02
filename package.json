@@ -2,7 +2,7 @@
   "name": "vscode-memory-usage",
   "displayName": "VS Code Memory Usage",
   "description": "Show VS Code Memory Usage",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "undermoon",
   "repository": "https://github.com/undermoonn/vscode-memory",
   "icon": "images/icon.png",
@@ -11,7 +11,7 @@
     "theme": "dark"
   },
   "engines": {
-    "vscode": "^1.92.0",
+    "vscode": "^1.91.0",
     "node": "^20.17.0"
   },
   "packageManager": "pnpm@9.4.0",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@types/node": "^22.5.0",
     "@types/pidusage": "^2.0.5",
-    "@types/vscode": "^1.92.0",
+    "@types/vscode": "^1.91.0",
     "esbuild": "^0.23.1",
     "typescript": "^5.5.4"
   },

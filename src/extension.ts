@@ -11,6 +11,13 @@ import find from 'find-process'
 import pidusage from 'pidusage'
 import os from 'node:os'
 
+function getProcessSearchTerm() {
+  if (process.execPath?.match(/Cursor Helper/)) {
+    return 'Cursor'
+  }
+  return 'Visual Studio Code'
+}
+
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(new VSMemory())
 }
@@ -28,15 +35,8 @@ class VSMemory {
 
   private update(statusBarItem: StatusBarItem) {
     const config = workspace.getConfiguration('vscodememoryusage')
-    /*
-     * `searchTerm` has been introduced, so that the extension can work on multiple platforms.
-     *
-     * In linux the term to be searched must be "code", in other platforms like OSX the term must be "Visual".
-     */
-    const searchTerm =
-      process.platform === 'linux' || process.platform === 'darwin'
-        ? 'Visual Studio Code'
-        : 'Visual'
+
+    const searchTerm = getProcessSearchTerm()
 
     return find('name', searchTerm, true).then((list) => {
       const pids = list.map((item) => item && item.pid)

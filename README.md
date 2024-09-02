@@ -10,6 +10,11 @@ Show VS Code memory usage.
 
 ## Release Notes
 
+### 1.2.0
+
+- Cursor support
+- Fix windows support
+
 ### 1.1.0
 
 - Fix Total GiB
