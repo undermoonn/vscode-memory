@@ -12,7 +12,7 @@ import pidusage from 'pidusage'
 import os from 'node:os'
 
 function getProcessSearchTerm() {
-  if (process.execPath?.match(/Cursor Helper/)) {
+  if (process.execPath?.match(/Cursor/)) {
     return 'Cursor'
   }
   if (process.platform === 'linux' || process.platform === 'darwin') {
